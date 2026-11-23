@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://android.com">
+<manifest xmlns:android="http://android.com"
+    xmlns:tools="http://android.com">
 
     <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="32" />
@@ -7,14 +8,16 @@
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
-    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"
+        tools:ignore="QueryAllPackagesPermission" />
 
     <application
         android:allowBackup="true"
         android:label="Hari PC Launcher"
         android:supportsRtl="true"
         android:hardwareAccelerated="true"
-        android:theme="@style/Theme.AppCompat.NoActionBar">
+        android:theme="@style/Theme.AppCompat.NoActionBar"
+        tools:replace="android:theme">
 
         <activity
             android:name=".MainActivity"
@@ -33,3 +36,4 @@
     </application>
 
 </manifest>
+
